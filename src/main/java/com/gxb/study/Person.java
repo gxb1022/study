@@ -1,6 +1,20 @@
 package com.gxb.study;
 
+import java.lang.reflect.Field;
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
+
 public class Person {
+
+
+    public static void main(String[] args) throws NoSuchFieldException, NoSuchMethodException, InvocationTargetException, IllegalAccessException {
+        Object obj = new Person();
+        System.out.println(obj.getClass().getDeclaredField("name"));
+        Field name = obj.getClass().getDeclaredField("name");
+        name.setAccessible(true);
+         Method setName = obj.getClass().getMethod("setName", String.class);
+         setName.invoke(obj,"guo");
+    }
    private String name;
    private int age;
    private String address;
@@ -45,4 +59,7 @@ public class Person {
     public void setAddress(String address) {
         this.address = address;
     }
+
+
+
 }

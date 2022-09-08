@@ -2,36 +2,47 @@ package com.gxb.study;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 public class Nine {
     public static void main(String[] args) {
         //mopao
-        int [] nums = {7,5,9,6,4,12,3,19};
+//        int [] nums = {7,5,9,6,4,12,3,19};
+//
+//        //冒泡
+//        /*for (int i = 0; i < nums.length; i++) {
+//            for (int k = i+1; k < nums.length; k++) {
+//                if(nums[i]>nums[k]){
+//                    int a = nums[i];
+//                    nums[i] = nums[k];
+//                    nums[k] = a;
+//                }
+//            }
+//        }*/
+//        int rows = 5;
+//        int cloums = 5;
+//        int startX = 0;
+//        int startY = 0;
+//        while (rows>startX*2 && cloums> startY*2){
+//
+//        }
+        Student student = new Student();
+        student.setStudentId("1");
 
-        //冒泡
-        /*for (int i = 0; i < nums.length; i++) {
-            for (int k = i+1; k < nums.length; k++) {
-                if(nums[i]>nums[k]){
-                    int a = nums[i];
-                    nums[i] = nums[k];
-                    nums[k] = a;
-                }
-            }
-        }*/
-        int rows = 5;
-        int cloums = 5;
-        int startX = 0;
-        int startY = 0;
-        while (rows>startX*2 && cloums> startY*2){
+        Student student1 = null;
 
+        Optional<Student> opt = Optional.ofNullable(student1);
+        System.out.println(opt.isPresent());
+        if(opt.isPresent()){
+            final Student student2 = opt.get();
         }
 
 
-
-        for (int i = 0; i < nums.length; i++) {
-            System.out.println(nums[i]);
-        }
+//        for (int i = 0; i < nums.length; i++) {
+//            System.out.println(nums[i]);
+//        }
     }
+
 
     private void test(int [][] nums){
         List list = new ArrayList();
