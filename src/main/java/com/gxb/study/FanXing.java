@@ -1,7 +1,9 @@
 package com.gxb.study;
 
-import com.sun.corba.se.spi.orbutil.threadpool.WorkQueue;
-
+/**
+ * 加注释
+ * @param <R>
+ */
 public class FanXing <R>{
     private R clazz;
 
